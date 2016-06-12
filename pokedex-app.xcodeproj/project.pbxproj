@@ -14,6 +14,7 @@
 		E03FB2F21D0C7C5E00A533EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E03FB2F01D0C7C5E00A533EB /* LaunchScreen.storyboard */; };
 		E03FB2FA1D0C80DC00A533EB /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = E03FB2F91D0C80DC00A533EB /* pokemon.csv */; };
 		E03FB2FF1D0CA76E00A533EB /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03FB2FE1D0CA76E00A533EB /* Pokemon.swift */; };
+		E03FB3011D0D66E800A533EB /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E03FB3001D0D66E800A533EB /* music.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E03FB2F31D0C7C5E00A533EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E03FB2F91D0C80DC00A533EB /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
 		E03FB2FE1D0CA76E00A533EB /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		E03FB3001D0D66E800A533EB /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				E03FB2FB1D0C83BC00A533EB /* Model */,
 				E03FB2E71D0C7C5D00A533EB /* AppDelegate.swift */,
 				E03FB2F91D0C80DC00A533EB /* pokemon.csv */,
+				E03FB3001D0D66E800A533EB /* music.mp3 */,
 				E03FB2EE1D0C7C5E00A533EB /* Assets.xcassets */,
 				E03FB2F31D0C7C5E00A533EB /* Info.plist */,
 			);
@@ -152,6 +155,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E03FB3011D0D66E800A533EB /* music.mp3 in Resources */,
 				E03FB2F21D0C7C5E00A533EB /* LaunchScreen.storyboard in Resources */,
 				E03FB2EF1D0C7C5E00A533EB /* Assets.xcassets in Resources */,
 				E03FB2FA1D0C80DC00A533EB /* pokemon.csv in Resources */,
@@ -320,6 +324,7 @@
 				E03FB2F81D0C7C5E00A533EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
