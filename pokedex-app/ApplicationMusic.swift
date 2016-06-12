@@ -9,7 +9,7 @@
 import Foundation
 import AVFoundation
 
-class applicationMusic {
+class ApplicationMusic {
 
     // MARK: - Properties
     var audioPlayer: AVAudioPlayer!

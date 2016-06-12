@@ -19,7 +19,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     // MARK: - Properties
     
     var pokemons = [Pokemon]()
-    var audioPlayer: applicationMusic!
+    var audioPlayer: ApplicationMusic!
     
     
     // MARK: - View lyfecycle
@@ -28,7 +28,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         super.viewDidLoad()
         collection.delegate = self
         collection.dataSource = self
-        audioPlayer = applicationMusic()
+        audioPlayer = ApplicationMusic()
         parsePokemonCSV()
     }
     
