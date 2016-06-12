@@ -14,12 +14,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @IBOutlet weak var collection: UICollectionView!
     
+    // MARK: - Properties
+    
+    var pokemons = [Pokemon]()
+    
     // MARK: - View lyfecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collection.delegate = self
         collection.dataSource = self
+        parsePokemonCSV()
     }
 
     // MARK: - UICollection View methods
@@ -29,7 +34,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 718
+        return pokemons.count
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
@@ -37,9 +42,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        
         if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PokeCell", forIndexPath: indexPath) as? PokeCell {
-            let pokemon = Pokemon(name: "Test", pokedexId: indexPath.row)
+            
+            let pokemon = pokemons[indexPath.row]
+            //let pokemon = Pokemon(name: "Test", pokedexId: indexPath.row)
             cell.configureCell(pokemon)
             
             return cell
@@ -52,8 +58,23 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
     }
     
-
-
+    // MARK: - Parsing CSV
+    
+    func parsePokemonCSV() {
+        let path = NSBundle.mainBundle().pathForResource("pokemon", ofType: "csv")!
+        do {
+            let csv = try CSV(contentsOfURL: path)
+            let rows = csv.rows
+            for row in rows {
+                if let pokeName = row["identifier"], let pokeId = Int(row["id"]!) {
+                    let pokemon = Pokemon(name: pokeName, pokedexId: pokeId)
+                    pokemons.append(pokemon)
+                }
+            }
+        } catch let err as NSError {
+            print(err.debugDescription)
+        }
+    }
 
 }
 
