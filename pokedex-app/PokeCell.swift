@@ -21,10 +21,15 @@ class PokeCell: UICollectionViewCell {
     
     // MARK: - Cell Display
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        pokemonImg.layer.cornerRadius = 5.0
-        pokemonImg.clipsToBounds = true
+//    override func awakeFromNib() {
+//        super.awakeFromNib()
+//        pokemonImg.layer.cornerRadius = 5.0
+//        pokemonImg.clipsToBounds = true
+//    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        layer.cornerRadius = 5.0
     }
     
     // MARK: - Cell Configuration
