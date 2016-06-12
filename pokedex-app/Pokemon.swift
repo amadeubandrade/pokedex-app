@@ -10,10 +10,14 @@ import Foundation
 
 class Pokemon {
 
-    //# MARK: - Properties
+    // MARK: - Properties
+    
     private var _name: String!
     private var _pokedexId: Int!
     
+    
+    // MARK: - Computed Properties
+
     var name: String {
         return _name
     }
@@ -22,7 +26,9 @@ class Pokemon {
         return _pokedexId
     }
     
-    //# MARK: - Initializer
+    
+    // MARK: - Initializer
+    
     init(name: String, pokedexId: Int) {
         _name = name
         _pokedexId = pokedexId

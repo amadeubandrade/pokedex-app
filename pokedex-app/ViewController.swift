@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
@@ -14,9 +15,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @IBOutlet weak var collection: UICollectionView!
     
+    
     // MARK: - Properties
     
     var pokemons = [Pokemon]()
+    var audioPlayer: applicationMusic!
+    
     
     // MARK: - View lyfecycle
     
@@ -24,9 +28,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         super.viewDidLoad()
         collection.delegate = self
         collection.dataSource = self
+        audioPlayer = applicationMusic()
         parsePokemonCSV()
     }
-
+    
+    
     // MARK: - UICollection View methods
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -57,6 +63,20 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
     }
+    
+
+    // MARK: - IBActions
+    
+    @IBAction func onMusicBtnPressed(sender: UIButton) {
+        if audioPlayer.isPlaying() {
+            audioPlayer.stopAudio()
+            sender.alpha = 0.5
+        } else {
+            audioPlayer.playAudio()
+            sender.alpha = 1.0
+        }
+    }
+    
     
     // MARK: - Parsing CSV
     

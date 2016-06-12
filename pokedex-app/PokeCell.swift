@@ -15,22 +15,19 @@ class PokeCell: UICollectionViewCell {
     @IBOutlet weak var pokemonImg: UIImageView!
     @IBOutlet weak var pokemonName: UILabel!
     
+    
     // MARK: - Properties
     
     var pokemon: Pokemon!
     
-    // MARK: - Cell Display
     
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//        pokemonImg.layer.cornerRadius = 5.0
-//        pokemonImg.clipsToBounds = true
-//    }
+    // MARK: - Cell Display
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         layer.cornerRadius = 5.0
     }
+    
     
     // MARK: - Cell Configuration
     
