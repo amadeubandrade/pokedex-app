@@ -66,7 +66,6 @@ class PokedexVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
             } else {
                 pokemon = pokemons[indexPath.row]
             }
-            //let pokemon = Pokemon(name: "Test", pokedexId: indexPath.row)
             cell.configureCell(pokemon)
             
             return cell
@@ -145,6 +144,7 @@ class PokedexVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
             if let detailsVC = segue.destinationViewController as? PokemonDetailsVC {
                 if let pokemon = sender as? Pokemon {
                     detailsVC.pokemon = pokemon
+                    detailsVC.audioPlayer = audioPlayer
                 }
             }
         }
