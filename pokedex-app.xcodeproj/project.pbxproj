@@ -19,6 +19,7 @@
 		E03FB3071D0D8A6600A533EB /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03FB3061D0D8A6600A533EB /* csv.swift */; };
 		E03FB3091D0D91B200A533EB /* Pokemon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E03FB3081D0D91B200A533EB /* Pokemon.ttf */; };
 		E03FB30B1D0D98EB00A533EB /* ApplicationMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03FB30A1D0D98EB00A533EB /* ApplicationMusic.swift */; };
+		E03FB30D1D0FEB8F00A533EB /* PokemonDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03FB30C1D0FEB8F00A533EB /* PokemonDetailsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		E03FB3061D0D8A6600A533EB /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
 		E03FB3081D0D91B200A533EB /* Pokemon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pokemon.ttf; sourceTree = "<group>"; };
 		E03FB30A1D0D98EB00A533EB /* ApplicationMusic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationMusic.swift; sourceTree = "<group>"; };
+		E03FB30C1D0FEB8F00A533EB /* PokemonDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonDetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				E03FB2E91D0C7C5D00A533EB /* ViewController.swift */,
+				E03FB30C1D0FEB8F00A533EB /* PokemonDetailsVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			files = (
 				E03FB3031D0D6E2600A533EB /* PokeCell.swift in Sources */,
 				E03FB2EA1D0C7C5D00A533EB /* ViewController.swift in Sources */,
+				E03FB30D1D0FEB8F00A533EB /* PokemonDetailsVC.swift in Sources */,
 				E03FB2E81D0C7C5D00A533EB /* AppDelegate.swift in Sources */,
 				E03FB2FF1D0CA76E00A533EB /* Pokemon.swift in Sources */,
 				E03FB30B1D0D98EB00A533EB /* ApplicationMusic.swift in Sources */,
