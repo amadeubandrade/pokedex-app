@@ -465,12 +465,33 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="1000"/>
                     <connections>
+                        <outlet property="aboutLbl" destination="6ya-DA-0gv" id="NCv-qQ-IUO"/>
+                        <outlet property="atkBar" destination="vm8-Rj-ahn" id="tA3-pC-77L"/>
+                        <outlet property="atkLbl" destination="tOP-tm-Te9" id="ne8-au-xLf"/>
+                        <outlet property="defBar" destination="BD6-df-Gxg" id="ydF-Yy-wR4"/>
+                        <outlet property="defLbl" destination="aOs-bM-FlU" id="NEQ-Hb-83e"/>
+                        <outlet property="evo1Img" destination="EGz-yx-u6I" id="Mq4-yc-LYI"/>
+                        <outlet property="evo2Img" destination="tl5-bj-0nM" id="OXI-X1-xdg"/>
+                        <outlet property="hpBar" destination="f0J-4L-6Bh" id="hxG-Ip-CHi"/>
+                        <outlet property="hpLbl" destination="76f-k6-mJ5" id="AEj-7L-Fzj"/>
+                        <outlet property="pokeHeight" destination="OoP-H5-ofp" id="WSB-PY-Oee"/>
+                        <outlet property="pokeID" destination="BWW-4s-VPy" id="hd5-8I-I2R"/>
+                        <outlet property="pokeImg" destination="0pF-vY-sGT" id="SM3-Hc-gvc"/>
+                        <outlet property="pokeType" destination="uLP-KD-N63" id="Paj-FK-gjt"/>
+                        <outlet property="pokeWeight" destination="4WC-eO-92y" id="zLa-au-ypB"/>
+                        <outlet property="spaBar" destination="1nb-Ig-eug" id="s2d-sS-h0q"/>
+                        <outlet property="spaLbl" destination="t2s-lt-AZD" id="2Pf-HZ-xjl"/>
+                        <outlet property="spdBar" destination="HSA-75-AYZ" id="sNP-jD-uE6"/>
+                        <outlet property="spdLbl" destination="LGw-hI-DtD" id="x9l-tB-LOY"/>
+                        <outlet property="speBar" destination="4Pi-pL-fQc" id="CLS-lD-bDv"/>
+                        <outlet property="speLbl" destination="WTV-Yo-hgd" id="w3R-yH-8h3"/>
                         <outlet property="topLbl" destination="SFh-et-Ejk" id="AIw-Wf-QKi"/>
+                        <outlet property="whereToFindLbl" destination="n2B-3z-Gnm" id="bTc-Fc-3SG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FY1-p5-Ti1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="911" y="305"/>
+            <point key="canvasLocation" x="962" y="305"/>
         </scene>
     </scenes>
     <resources>
