@@ -8,33 +8,6 @@
     <customFonts key="customFonts">
         <mutableArray key="Pokedex.ttf">
             <string>PokemonTTF</string>
-            <string>PokemonTTF</string>
-            <string>PokemonTTF</string>
-            <string>PokemonTTF</string>
-            <string>PokemonTTF</string>
-            <string>PokemonTTF</string>
-            <string>PokemonTTF</string>
-            <string>PokemonTTF</string>
-            <string>PokemonTTF</string>
-            <string>PokemonTTF</string>
-            <string>PokemonTTF</string>
-            <string>PokemonTTF</string>
-            <string>PokemonTTF</string>
-            <string>PokemonTTF</string>
-            <string>PokemonTTF</string>
-            <string>PokemonTTF</string>
-            <string>PokemonTTF</string>
-            <string>PokemonTTF</string>
-            <string>PokemonTTF</string>
-            <string>PokemonTTF</string>
-            <string>PokemonTTF</string>
-            <string>PokemonTTF</string>
-            <string>PokemonTTF</string>
-            <string>PokemonTTF</string>
-            <string>PokemonTTF</string>
-            <string>PokemonTTF</string>
-            <string>PokemonTTF</string>
-            <string>PokemonTTF</string>
         </mutableArray>
         <mutableArray key="Pokemon.ttf">
             <string>PokemonSolidNormal</string>
@@ -203,7 +176,7 @@
                                                             <constraint firstAttribute="width" constant="131" id="ESp-G9-SOW"/>
                                                             <constraint firstAttribute="height" constant="30" id="pvJ-L6-c48"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="PokemonTTF" family="Pokemon TTF" pointSize="16"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -231,6 +204,7 @@
                                             </view>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ynN-5q-o9s">
                                                 <rect key="frame" x="20" y="75" width="560" height="29"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="28" id="EPR-Jh-N2k"/>
                                                 </constraints>
@@ -240,10 +214,10 @@
                                                 </segments>
                                                 <color key="tintColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                             </segmentedControl>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HcK-j1-P3k">
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HcK-j1-P3k" userLabel="infoSV">
                                                 <rect key="frame" x="20" y="123" width="560" height="115"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0pF-vY-sGT" userLabel="pokemonImg">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="0pF-vY-sGT" userLabel="pokemonImg">
                                                         <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="115" id="JGe-xQ-1KQ"/>
@@ -254,66 +228,64 @@
                                                         <rect key="frame" x="125" y="0.0" width="435" height="115"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Nrt-8x-sdE" userLabel="pokeIDSV">
-                                                                <rect key="frame" x="0.0" y="0.0" width="99" height="25"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67" height="25"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poke ID:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSo-WO-imO">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="83" height="25"/>
-                                                                        <fontDescription key="fontDescription" name="PokemonTTF" family="Pokemon TTF" pointSize="11"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="54" height="25"/>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWW-4s-VPy">
-                                                                        <rect key="frame" x="88" y="0.0" width="11" height="25"/>
-                                                                        <fontDescription key="fontDescription" name="PokemonTTF" family="Pokemon TTF" pointSize="11"/>
-                                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                        <rect key="frame" x="59" y="0.0" width="8" height="25"/>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="14"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="VMf-2n-7YW" userLabel="heightSV">
-                                                                <rect key="frame" x="0.0" y="30" width="93" height="25"/>
+                                                                <rect key="frame" x="0.0" y="30" width="58" height="25"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foa-Jw-ZC8">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="77" height="25"/>
-                                                                        <fontDescription key="fontDescription" name="PokemonTTF" family="Pokemon TTF" pointSize="11"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="25"/>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OoP-H5-ofp">
-                                                                        <rect key="frame" x="82" y="0.0" width="11" height="25"/>
-                                                                        <fontDescription key="fontDescription" name="PokemonTTF" family="Pokemon TTF" pointSize="11"/>
-                                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                        <rect key="frame" x="50" y="0.0" width="8" height="25"/>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="14"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="YNp-ao-fpJ" userLabel="weightSV">
-                                                                <rect key="frame" x="0.0" y="60" width="115" height="25"/>
+                                                                <rect key="frame" x="0.0" y="60" width="76" height="25"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kx7-gU-Qo4">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="77" height="25"/>
-                                                                        <fontDescription key="fontDescription" name="PokemonTTF" family="Pokemon TTF" pointSize="11"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="47" height="25"/>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4WC-eO-92y">
-                                                                        <rect key="frame" x="82" y="0.0" width="33" height="25"/>
-                                                                        <fontDescription key="fontDescription" name="PokemonTTF" family="Pokemon TTF" pointSize="11"/>
+                                                                        <rect key="frame" x="52" y="0.0" width="24" height="25"/>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="14"/>
                                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="f0b-4r-rlY" userLabel="typeSV">
-                                                                <rect key="frame" x="0.0" y="90" width="225" height="25"/>
+                                                                <rect key="frame" x="0.0" y="90" width="129" height="25"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m41-Gg-uen">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="55" height="25"/>
-                                                                        <fontDescription key="fontDescription" name="PokemonTTF" family="Pokemon TTF" pointSize="11"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="34" height="25"/>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="stuff and stuff2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uLP-KD-N63">
-                                                                        <rect key="frame" x="60" y="0.0" width="165" height="25"/>
-                                                                        <fontDescription key="fontDescription" name="PokemonTTF" family="Pokemon TTF" pointSize="11"/>
+                                                                        <rect key="frame" x="39" y="0.0" width="90" height="25"/>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="14"/>
                                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
@@ -329,9 +301,12 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ELP-zR-0im" userLabel="aboutBar">
                                                 <rect key="frame" x="0.0" y="258" width="600" height="30"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZC3-DG-hHU">
-                                                        <rect key="frame" x="8" y="4" width="136" height="21"/>
-                                                        <fontDescription key="fontDescription" name="PokemonTTF" family="Pokemon TTF" pointSize="14"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZC3-DG-hHU">
+                                                        <rect key="frame" x="8" y="4" width="40" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="21" id="MyL-pc-TrK"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -339,6 +314,8 @@
                                                 <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="Ko8-9B-afA"/>
+                                                    <constraint firstItem="ZC3-DG-hHU" firstAttribute="top" secondItem="ELP-zR-0im" secondAttribute="top" constant="4" id="M1T-0I-jQn"/>
+                                                    <constraint firstItem="ZC3-DG-hHU" firstAttribute="leading" secondItem="ELP-zR-0im" secondAttribute="leading" constant="8" id="UMY-bH-vR2"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6ya-DA-0gv">
@@ -347,175 +324,18 @@
                                                     <constraint firstAttribute="height" constant="120" id="GPq-oO-O7q"/>
                                                 </constraints>
                                                 <string key="text">Bulbasaur is a small, quadruped Pokémon that has blue-green skin with darker green patches. It has red eyes with white pupils and pointed, ear-like structures on top of its head. Its snout is short and blunt, and it has a wide mouth. A pair of small, pointed teeth are visible in the upper jaw when its mouth is open. Each of its thick legs ends with three sharp claws. On its back is a green plant bulb, which is grown from a seed planted there at birth. </string>
-                                                <fontDescription key="fontDescription" name="PokemonTTF" family="Pokemon TTF" pointSize="13"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="14"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HP:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1E-5r-rYs">
-                                                <rect key="frame" x="20" y="503" width="53" height="21"/>
-                                                <fontDescription key="fontDescription" name="PokemonTTF" family="Pokemon TTF" pointSize="13"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76f-k6-mJ5">
-                                                <rect key="frame" x="78" y="503" width="45" height="22"/>
-                                                <fontDescription key="fontDescription" name="PokemonTTF" family="Pokemon TTF" pointSize="13"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <progressView opaque="NO" contentMode="scaleAspectFit" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="f0J-4L-6Bh">
-                                                <rect key="frame" x="135" y="507" width="445" height="2"/>
-                                                <color key="progressTintColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="trackTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                            </progressView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ATK:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XcG-u4-F3k">
-                                                <rect key="frame" x="20" y="532" width="53" height="21"/>
-                                                <fontDescription key="fontDescription" name="PokemonTTF" family="Pokemon TTF" pointSize="13"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOP-tm-Te9">
-                                                <rect key="frame" x="78" y="532" width="45" height="21"/>
-                                                <fontDescription key="fontDescription" name="PokemonTTF" family="Pokemon TTF" pointSize="13"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <progressView opaque="NO" contentMode="scaleAspectFit" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vm8-Rj-ahn">
-                                                <rect key="frame" x="135" y="539" width="445" height="10"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="10" id="EJb-v8-H0m"/>
-                                                </constraints>
-                                                <color key="progressTintColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="trackTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                            </progressView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DEF:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bur-xw-MR2">
-                                                <rect key="frame" x="20" y="561" width="53" height="21"/>
-                                                <fontDescription key="fontDescription" name="PokemonTTF" family="Pokemon TTF" pointSize="13"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOs-bM-FlU">
-                                                <rect key="frame" x="78" y="562" width="45" height="21"/>
-                                                <fontDescription key="fontDescription" name="PokemonTTF" family="Pokemon TTF" pointSize="13"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <progressView opaque="NO" contentMode="scaleAspectFit" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BD6-df-Gxg">
-                                                <rect key="frame" x="135" y="568" width="445" height="10"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="10" id="e64-zc-6Rn"/>
-                                                </constraints>
-                                                <color key="progressTintColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="trackTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                            </progressView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SPE:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgA-4e-tM5">
-                                                <rect key="frame" x="20" y="590" width="53" height="21"/>
-                                                <fontDescription key="fontDescription" name="PokemonTTF" family="Pokemon TTF" pointSize="13"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTV-Yo-hgd">
-                                                <rect key="frame" x="78" y="591" width="45" height="21"/>
-                                                <fontDescription key="fontDescription" name="PokemonTTF" family="Pokemon TTF" pointSize="13"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <progressView opaque="NO" contentMode="scaleAspectFit" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4Pi-pL-fQc">
-                                                <rect key="frame" x="135" y="597" width="445" height="10"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="10" id="ebi-Va-VXh"/>
-                                                </constraints>
-                                                <color key="progressTintColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="trackTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                            </progressView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SPA:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X6f-lv-nT7">
-                                                <rect key="frame" x="20" y="619" width="53" height="21"/>
-                                                <fontDescription key="fontDescription" name="PokemonTTF" family="Pokemon TTF" pointSize="13"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2s-lt-AZD">
-                                                <rect key="frame" x="78" y="620" width="45" height="21"/>
-                                                <fontDescription key="fontDescription" name="PokemonTTF" family="Pokemon TTF" pointSize="13"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <progressView opaque="NO" contentMode="scaleAspectFit" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1nb-Ig-eug">
-                                                <rect key="frame" x="135" y="626" width="445" height="10"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="10" id="qP4-B7-C3x"/>
-                                                </constraints>
-                                                <color key="progressTintColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="trackTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                            </progressView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SPD:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ank-zM-Lss">
-                                                <rect key="frame" x="20" y="648" width="53" height="21"/>
-                                                <fontDescription key="fontDescription" name="PokemonTTF" family="Pokemon TTF" pointSize="13"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGw-hI-DtD">
-                                                <rect key="frame" x="78" y="649" width="45" height="21"/>
-                                                <fontDescription key="fontDescription" name="PokemonTTF" family="Pokemon TTF" pointSize="13"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <progressView opaque="NO" contentMode="scaleAspectFit" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HSA-75-AYZ">
-                                                <rect key="frame" x="135" y="654" width="445" height="10"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="10" id="t46-TH-PCh"/>
-                                                </constraints>
-                                                <color key="progressTintColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="trackTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                            </progressView>
-                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FQZ-z5-8ld" userLabel="whereToBar">
-                                                <rect key="frame" x="0.0" y="683" width="600" height="29"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Where To Find" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrM-hT-oGP">
-                                                        <rect key="frame" x="8" y="4" width="181" height="21"/>
-                                                        <fontDescription key="fontDescription" name="PokemonTTF" family="Pokemon TTF" pointSize="14"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="Jzi-1a-zQ3"/>
-                                                </constraints>
-                                            </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="where to find text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n2B-3z-Gnm">
-                                                <rect key="frame" x="20" y="728" width="560" height="91"/>
-                                                <fontDescription key="fontDescription" name="PokemonTTF" family="Pokemon TTF" pointSize="13"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z3D-0W-yZl" userLabel="evoBar">
-                                                <rect key="frame" x="0.0" y="839" width="600" height="29"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Evolutions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmv-PA-nkm">
-                                                        <rect key="frame" x="8" y="4" width="181" height="21"/>
-                                                        <fontDescription key="fontDescription" name="PokemonTTF" family="Pokemon TTF" pointSize="14"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="S23-2Y-8H9"/>
-                                                </constraints>
-                                            </view>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EGz-yx-u6I">
-                                                <rect key="frame" x="135" y="885" width="100" height="100"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tl5-bj-0nM">
-                                                <rect key="frame" x="346" y="885" width="100" height="100"/>
-                                            </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r21-fe-Gsr" userLabel="statsBar">
                                                 <rect key="frame" x="0.0" y="424" width="600" height="30"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qe3-mS-TQZ">
-                                                        <rect key="frame" x="8" y="4" width="136" height="21"/>
-                                                        <fontDescription key="fontDescription" name="PokemonTTF" family="Pokemon TTF" pointSize="14"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qe3-mS-TQZ">
+                                                        <rect key="frame" x="8" y="4" width="35" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="21" id="g1b-cH-8NL"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -523,32 +343,291 @@
                                                 <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="Ifc-sp-sBT"/>
+                                                    <constraint firstItem="Qe3-mS-TQZ" firstAttribute="leading" secondItem="r21-fe-Gsr" secondAttribute="leading" constant="8" id="mBR-1V-EDI"/>
+                                                    <constraint firstItem="Qe3-mS-TQZ" firstAttribute="top" secondItem="r21-fe-Gsr" secondAttribute="top" constant="4" id="n2o-no-Kbp"/>
                                                 </constraints>
                                             </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="X5h-hG-fsV" userLabel="statsSV">
+                                                <rect key="frame" x="20" y="462" width="560" height="166"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="CSi-aJ-aui" userLabel="hpSV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="560" height="21"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HP:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1E-5r-rYs">
+                                                                <rect key="frame" x="0.0" y="0.0" width="33" height="21"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="33" id="paQ-Up-0eg"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76f-k6-mJ5">
+                                                                <rect key="frame" x="38" y="0.0" width="45" height="21"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="45" id="Z0Q-bO-hUK"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="14"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <progressView opaque="NO" contentMode="scaleAspectFit" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="f0J-4L-6Bh">
+                                                                <rect key="frame" x="88" y="0.0" width="472" height="21"/>
+                                                                <color key="progressTintColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="trackTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                            </progressView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="21" id="1y4-EB-tYc"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jJq-xY-jMV" userLabel="atkSV">
+                                                        <rect key="frame" x="0.0" y="29" width="560" height="21"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ATK:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XcG-u4-F3k">
+                                                                <rect key="frame" x="0.0" y="0.0" width="33" height="21"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="33" id="fD3-zp-1S0"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOP-tm-Te9">
+                                                                <rect key="frame" x="38" y="0.0" width="45" height="21"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="45" id="b1b-xh-tpA"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="14"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <progressView opaque="NO" contentMode="scaleAspectFit" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vm8-Rj-ahn">
+                                                                <rect key="frame" x="88" y="0.0" width="472" height="21"/>
+                                                                <color key="progressTintColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="trackTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                            </progressView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="pRq-6g-YVB" userLabel="defSV">
+                                                        <rect key="frame" x="0.0" y="58" width="560" height="21"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DEF:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bur-xw-MR2">
+                                                                <rect key="frame" x="0.0" y="0.0" width="33" height="21"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="33" id="TbA-UH-lwz"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOs-bM-FlU">
+                                                                <rect key="frame" x="38" y="0.0" width="45" height="21"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="45" id="Sbg-4j-qzS"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="14"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <progressView opaque="NO" contentMode="scaleAspectFit" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BD6-df-Gxg">
+                                                                <rect key="frame" x="88" y="0.0" width="472" height="21"/>
+                                                                <color key="progressTintColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="trackTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                            </progressView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TpF-y3-sVe" userLabel="speSV">
+                                                        <rect key="frame" x="0.0" y="87" width="560" height="21"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPE:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgA-4e-tM5">
+                                                                <rect key="frame" x="0.0" y="0.0" width="33" height="21"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="33" id="lvu-Kz-IOs"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTV-Yo-hgd">
+                                                                <rect key="frame" x="38" y="0.0" width="45" height="21"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="45" id="e7k-v5-o5O"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="14"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <progressView opaque="NO" contentMode="scaleAspectFit" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4Pi-pL-fQc">
+                                                                <rect key="frame" x="88" y="0.0" width="472" height="21"/>
+                                                                <color key="progressTintColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="trackTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                            </progressView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="smX-PR-ZdS" userLabel="spaSV">
+                                                        <rect key="frame" x="0.0" y="116" width="560" height="21"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPA:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X6f-lv-nT7">
+                                                                <rect key="frame" x="0.0" y="0.0" width="33" height="21"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="33" id="ZVM-fN-em2"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2s-lt-AZD">
+                                                                <rect key="frame" x="38" y="0.0" width="45" height="21"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="45" id="fw2-Wx-D5v"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="14"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <progressView opaque="NO" contentMode="scaleAspectFit" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1nb-Ig-eug">
+                                                                <rect key="frame" x="88" y="0.0" width="472" height="21"/>
+                                                                <color key="progressTintColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="trackTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                            </progressView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="YFi-HG-Exx" userLabel="spdSV">
+                                                        <rect key="frame" x="0.0" y="145" width="560" height="21"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPD:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ank-zM-Lss">
+                                                                <rect key="frame" x="0.0" y="0.0" width="33" height="21"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="33" id="6r9-px-3lV"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGw-hI-DtD">
+                                                                <rect key="frame" x="38" y="0.0" width="45" height="21"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="45" id="Upf-yd-nyo"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="14"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <progressView opaque="NO" contentMode="scaleAspectFit" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HSA-75-AYZ">
+                                                                <rect key="frame" x="88" y="0.0" width="472" height="21"/>
+                                                                <color key="progressTintColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="trackTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                            </progressView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FQZ-z5-8ld" userLabel="whereToBar">
+                                                <rect key="frame" x="0.0" y="636" width="600" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where To Find" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrM-hT-oGP">
+                                                        <rect key="frame" x="8" y="4" width="95" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="21" id="OnN-xH-gKu"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="Jzi-1a-zQ3"/>
+                                                    <constraint firstItem="mrM-hT-oGP" firstAttribute="leading" secondItem="FQZ-z5-8ld" secondAttribute="leading" constant="8" id="cXn-51-vGk"/>
+                                                    <constraint firstItem="mrM-hT-oGP" firstAttribute="top" secondItem="FQZ-z5-8ld" secondAttribute="top" constant="4" id="rVr-Li-nSH"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Route 13, 14, 15, Berry Forest, Bond Bridge, Five Isle Meadow" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n2B-3z-Gnm">
+                                                <rect key="frame" x="20" y="674" width="560" height="120"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="120" id="NkT-Lf-MYp"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="14"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z3D-0W-yZl" userLabel="evoBar">
+                                                <rect key="frame" x="0.0" y="802" width="600" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evolutions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmv-PA-nkm">
+                                                        <rect key="frame" x="8" y="4" width="70" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="21" id="gsI-Rw-EJM"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="S23-2Y-8H9"/>
+                                                    <constraint firstItem="jmv-PA-nkm" firstAttribute="top" secondItem="Z3D-0W-yZl" secondAttribute="top" constant="4" id="ov5-IE-HJi"/>
+                                                    <constraint firstItem="jmv-PA-nkm" firstAttribute="leading" secondItem="Z3D-0W-yZl" secondAttribute="leading" constant="8" id="yDB-Vi-vqO"/>
+                                                </constraints>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="IH1-t4-2TT" userLabel="evolSV">
+                                                <rect key="frame" x="175" y="840" width="250" height="115"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="EGz-yx-u6I">
+                                                        <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="115" id="2tt-v0-2M8"/>
+                                                            <constraint firstAttribute="height" constant="115" id="Ppb-FM-1u4"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="tl5-bj-0nM">
+                                                        <rect key="frame" x="135" y="0.0" width="115" height="115"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="115" id="HIo-7r-fjX"/>
+                                                            <constraint firstAttribute="width" constant="115" id="f25-He-22K"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="n2B-3z-Gnm" secondAttribute="trailing" constant="20" id="1jg-od-nV0"/>
+                                            <constraint firstItem="n2B-3z-Gnm" firstAttribute="leading" secondItem="TSe-7J-x2J" secondAttribute="leading" constant="20" id="2gG-bx-Qe5"/>
+                                            <constraint firstItem="Z3D-0W-yZl" firstAttribute="leading" secondItem="TSe-7J-x2J" secondAttribute="leading" id="3L7-mI-LhI"/>
                                             <constraint firstAttribute="trailing" secondItem="r21-fe-Gsr" secondAttribute="trailing" id="3bF-N7-0ul"/>
+                                            <constraint firstItem="IH1-t4-2TT" firstAttribute="top" secondItem="Z3D-0W-yZl" secondAttribute="bottom" constant="8" id="41U-89-yc4"/>
                                             <constraint firstItem="HcK-j1-P3k" firstAttribute="top" secondItem="ynN-5q-o9s" secondAttribute="bottom" constant="20" id="4xx-77-5v4"/>
+                                            <constraint firstItem="FQZ-z5-8ld" firstAttribute="leading" secondItem="TSe-7J-x2J" secondAttribute="leading" id="6J3-ID-rXi"/>
                                             <constraint firstItem="ynN-5q-o9s" firstAttribute="leading" secondItem="TSe-7J-x2J" secondAttribute="leading" constant="20" id="6qY-2P-0dQ"/>
                                             <constraint firstAttribute="height" constant="1000" id="9Ur-rF-WrU"/>
+                                            <constraint firstAttribute="trailing" secondItem="Z3D-0W-yZl" secondAttribute="trailing" id="9cU-Tu-8rO"/>
                                             <constraint firstItem="Cgs-CW-anx" firstAttribute="top" secondItem="TSe-7J-x2J" secondAttribute="top" id="Cdp-XY-GMv"/>
+                                            <constraint firstItem="IH1-t4-2TT" firstAttribute="centerX" secondItem="TSe-7J-x2J" secondAttribute="centerX" id="Chs-cR-J5i"/>
                                             <constraint firstItem="6ya-DA-0gv" firstAttribute="leading" secondItem="TSe-7J-x2J" secondAttribute="leading" constant="20" id="Fpp-In-oYy"/>
                                             <constraint firstItem="Cgs-CW-anx" firstAttribute="leading" secondItem="TSe-7J-x2J" secondAttribute="leading" id="Fzm-J4-6zf"/>
                                             <constraint firstAttribute="trailing" secondItem="HcK-j1-P3k" secondAttribute="trailing" constant="20" id="GjJ-aG-KZj"/>
                                             <constraint firstItem="ELP-zR-0im" firstAttribute="leading" secondItem="TSe-7J-x2J" secondAttribute="leading" id="PNX-Ty-dp7"/>
+                                            <constraint firstItem="n2B-3z-Gnm" firstAttribute="top" secondItem="FQZ-z5-8ld" secondAttribute="bottom" constant="8" id="Pit-i7-xz2"/>
+                                            <constraint firstItem="Z3D-0W-yZl" firstAttribute="top" secondItem="n2B-3z-Gnm" secondAttribute="bottom" constant="8" id="QnA-Sr-uBw"/>
                                             <constraint firstAttribute="trailing" secondItem="Cgs-CW-anx" secondAttribute="trailing" id="RmK-ad-rJf"/>
                                             <constraint firstItem="r21-fe-Gsr" firstAttribute="leading" secondItem="TSe-7J-x2J" secondAttribute="leading" id="Rtc-wP-Dwz"/>
+                                            <constraint firstAttribute="trailing" secondItem="FQZ-z5-8ld" secondAttribute="trailing" id="Yr3-uL-1no"/>
                                             <constraint firstAttribute="trailing" secondItem="ynN-5q-o9s" secondAttribute="trailing" constant="20" id="aJq-wu-eX8"/>
                                             <constraint firstItem="Cgs-CW-anx" firstAttribute="top" secondItem="TSe-7J-x2J" secondAttribute="top" id="adH-0b-gvY"/>
                                             <constraint firstAttribute="trailing" secondItem="6ya-DA-0gv" secondAttribute="trailing" constant="20" id="agF-YW-4Ff"/>
                                             <constraint firstItem="ynN-5q-o9s" firstAttribute="top" secondItem="Cgs-CW-anx" secondAttribute="bottom" constant="8" id="bND-Se-2DB"/>
                                             <constraint firstItem="r21-fe-Gsr" firstAttribute="top" secondItem="6ya-DA-0gv" secondAttribute="bottom" constant="8" id="dXx-Fw-OaD"/>
+                                            <constraint firstItem="FQZ-z5-8ld" firstAttribute="top" secondItem="X5h-hG-fsV" secondAttribute="bottom" constant="8" id="eTr-Bz-sW8"/>
                                             <constraint firstItem="6ya-DA-0gv" firstAttribute="top" secondItem="ELP-zR-0im" secondAttribute="bottom" constant="8" id="hXd-Ad-SIZ"/>
                                             <constraint firstItem="ynN-5q-o9s" firstAttribute="top" secondItem="Cgs-CW-anx" secondAttribute="bottom" constant="20" id="jSx-4X-hal"/>
+                                            <constraint firstAttribute="trailing" secondItem="X5h-hG-fsV" secondAttribute="trailing" constant="20" id="jkC-hD-i44"/>
                                             <constraint firstItem="ELP-zR-0im" firstAttribute="top" secondItem="HcK-j1-P3k" secondAttribute="bottom" constant="20" id="lS4-0i-VCj"/>
                                             <constraint firstItem="HcK-j1-P3k" firstAttribute="leading" secondItem="TSe-7J-x2J" secondAttribute="leading" constant="20" id="pil-ta-JVm"/>
+                                            <constraint firstItem="X5h-hG-fsV" firstAttribute="top" secondItem="r21-fe-Gsr" secondAttribute="bottom" constant="8" id="tFh-bA-38C"/>
                                             <constraint firstAttribute="trailing" secondItem="ELP-zR-0im" secondAttribute="trailing" id="uxV-Qy-MO7"/>
+                                            <constraint firstItem="X5h-hG-fsV" firstAttribute="leading" secondItem="TSe-7J-x2J" secondAttribute="leading" constant="20" id="w09-0u-ieK"/>
                                             <constraint firstAttribute="trailing" secondItem="Cgs-CW-anx" secondAttribute="trailing" id="yGx-MX-Ata"/>
                                             <constraint firstItem="Cgs-CW-anx" firstAttribute="leading" secondItem="TSe-7J-x2J" secondAttribute="leading" id="yhG-ol-axd"/>
                                         </constraints>
@@ -612,7 +691,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1" width="120" height="120"/>
         <image name="100" width="120" height="120"/>
+        <image name="2" width="120" height="120"/>
+        <image name="3" width="120" height="120"/>
         <image name="bg" width="1920" height="1200"/>
         <image name="music" width="100" height="100"/>
     </resources>
