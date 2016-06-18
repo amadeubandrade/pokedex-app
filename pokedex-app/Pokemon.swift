@@ -16,8 +16,8 @@ class Pokemon {
     private var _name: String!
     private var _pokedexId: Int!
 
-    private var _height: Int!
-    private var _weight: Int!
+    private var _height: String!
+    private var _weight: String!
     private var _type: String!
     private var _about: String!
     private var _hp: Int!
@@ -44,67 +44,112 @@ class Pokemon {
         return _pokedexId
     }
     
-    var height: Int {
+    var pokeUrl: String {
+        return _pokeURL
+    }
+    
+    var height: String {
+        if _height == nil {
+            _height = "Unknown"
+        }
         return _height
     }
     
-    var weight: Int {
+    var weight: String {
+        if _weight == nil {
+            _weight = "Unknown"
+        }
         return _weight
     }
     
     var type: String {
+        if _type == nil {
+            _type = "Unknown"
+        }
         return _type
     }
     
     var about: String {
+        if _about == nil {
+            _about = "Unknown"
+        }
         return _about
     }
     
     var hp: Int {
+        if _hp == nil {
+            _hp = 0
+        }
         return _hp
     }
     
     var atk: Int {
+        if _atk == nil {
+            _atk = 0
+        }
         return _atk
     }
     
     var def: Int {
+        if _def == nil {
+            _def = 0
+        }
         return _def
     }
     
     var spe: Int {
+        if _spe == nil {
+            _spe = 0
+        }
         return _spe
     }
     
     var spa: Int {
+        if _spa == nil {
+            _spa = 0
+        }
         return _spa
     }
     
     var spd: Int {
+        if _spd == nil {
+            _spd = 0
+        }
         return _spd
     }
     
     var whereToFind: String {
+        if _whereToFind == nil {
+            _whereToFind = "Unknown"
+        }
         return _whereToFind
     }
 
     var evo1Name: String {
+        if _evo1Name == nil {
+            _evo1Name = ""
+        }
         return _evo1Name
     }
     
     var evo1ID: String {
+        if _evo1ID == nil {
+            _evo1ID = ""
+        }
         return _evo1ID
     }
     
-    var pokeURL: String {
-        return _pokeURL
-    }
-    
     var evo2Name: String {
+        if _evo2Name == nil {
+            _evo2Name = ""
+        }
         return _evo2Name
     }
     
     var evo2ID: String {
+        if _evo2ID == nil {
+            _evo2ID = ""
+        }
         return _evo2ID
     }
     
@@ -112,7 +157,7 @@ class Pokemon {
     // MARK: - Initializer
     
     init(name: String, pokedexId: Int) {
-        _name = name
+        _name = name.capitalizedString
         _pokedexId = pokedexId
         _pokeURL = "\(URL_BASE)\(URL_POKEMON)\(_pokedexId)/"
     }
@@ -128,10 +173,10 @@ class Pokemon {
             if let dict = result.value as? Dictionary<String, AnyObject> {
                 //Height and Weight
                 if let height = dict["height"] as? Int {
-                    self._height = height
+                    self._height = String(height)
                 }
                 if let weight = dict["weight"] as? Int {
-                    self._weight = weight
+                    self._weight = String(weight)
                 }
                 //Stats
                 if let attack = dict["attack"] as? Int {
@@ -165,8 +210,6 @@ class Pokemon {
                             }
                         })
                     }
-                } else {
-                    self._about = "Unknown"
                 }
                 //Types
                 if let types = dict["types"] as? [Dictionary<String, AnyObject>] where types.count > 0 {
@@ -180,14 +223,52 @@ class Pokemon {
                             }
                         }
                     }
-                } else {
-                    self._type = "Unknown"
                 }
                 //Evolutions
                 if let evolutions = dict["evolutions"] as? [Dictionary<String, AnyObject>] where evolutions.count > 0 {
-                
+                    
+                    //First evolution
+                    if let evoName1 = evolutions[0]["to"] as? String {
+                        
+                        if evoName1.rangeOfString("mega") == nil {
+                    
+                            self._evo1Name = evoName1
+                            if let evoID1 = evolutions[0]["resource_uri"] as? String {
+                                let aux = evoID1.stringByReplacingOccurrencesOfString("/api/v1/pokemon/", withString: "")
+                                let id = aux.stringByReplacingOccurrencesOfString("/", withString: "")
+                                self._evo1ID = id
+                            
+                                //Second evolution
+                                let evoUrl = NSURL(string: "\(URL_BASE)\(URL_POKEMON)\(self._evo1ID)/")!
+                                Alamofire.request(.GET, evoUrl).responseJSON(completionHandler: { evosResponse in
+                                    let evosResult = evosResponse.result
+                                    if let evolutionDict = evosResult.value as? Dictionary<String, AnyObject> {
+                                        if let evolution = evolutionDict["evolutions"] as? [Dictionary<String, AnyObject>] where evolution.count > 0 {
+                                            if let evoName2 = evolution[0]["to"] as? String {
+                                                if evoName2.rangeOfString("mega") == nil {
+                                                    self._evo2Name = evoName2
+                                                    if let evoID2 = evolution[0]["resource_uri"] as? String {
+                                                        let aux = evoID2.stringByReplacingOccurrencesOfString("/api/v1/pokemon/", withString: "")
+                                                        let id = aux.stringByReplacingOccurrencesOfString("/", withString: "")
+                                                        self._evo2ID = id
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    completed()
+                                })
+                            }
+                        } else {
+                            completed()
+                        }
+                    }
                 }
                 //where to find
+                
+                // TODO : - THIS ! !!   !! 
+
+                
 //                let encoutersUrl = NSURL(string: "\(self._pokeURL)encounters")!
 //                Alamofire.request(.GET, encoutersUrl).responseJSON(completionHandler: { encountersResponse in
 //                    let encountersResult = encountersResponse.result

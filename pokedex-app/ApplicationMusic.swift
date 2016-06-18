@@ -36,6 +36,7 @@ class ApplicationMusic {
         if audioPlayer.playing {
             stopAudio()
         }
+    // TODO : - Play sound in main thread!!
         audioPlayer.play()
     }
     

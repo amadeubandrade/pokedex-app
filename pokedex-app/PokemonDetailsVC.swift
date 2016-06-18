@@ -34,6 +34,8 @@ class PokemonDetailsVC: UIViewController {
     @IBOutlet weak var whereToFindLbl: UILabel!
     @IBOutlet weak var evo1Img: UIImageView!
     @IBOutlet weak var evo2Img: UIImageView!
+    @IBOutlet weak var evo1Lbl: UILabel!
+    @IBOutlet weak var evo2Lbl: UILabel!
     
     
     // MARK : - Properties
@@ -48,9 +50,9 @@ class PokemonDetailsVC: UIViewController {
         super.viewDidLoad()
         topLbl.text = pokemon.name
         pokeImg.image = UIImage(named: "\(pokemon.pokedexId)")
-        
-        pokemon.downloadPokemonDetails { 
-            //this will be called when download is done!
+        pokemon.downloadPokemonDetails {
+            print("HEYYYYYYY")
+            self.updateUI()
         }
     }
     
@@ -69,8 +71,41 @@ class PokemonDetailsVC: UIViewController {
     
     @IBAction func onBackBtnPressed(sender: UIButton) {
         dismissViewControllerAnimated(true, completion: nil)
+        
+    // TODO : - Correct sound when go back!
     }
 
+    
+    // MARK : - Functions
+    
+    func updateUI() {
+        pokeID.text = String(pokemon.pokedexId)
+        pokeHeight.text = pokemon.height
+        pokeWeight.text = pokemon.weight
+        pokeType.text = pokemon.type
+        aboutLbl.text = pokemon.about
+        hpLbl.text = String(pokemon.hp)
+        atkLbl.text = String(pokemon.atk)
+        defLbl.text = String(pokemon.def)
+        speLbl.text = String(pokemon.spe)
+        spaLbl.text = String(pokemon.spa)
+        spdLbl.text = String(pokemon.spd)
+        whereToFindLbl.text = pokemon.whereToFind
+        if pokemon.evo1ID == "" {
+            evo1Img.hidden = true
+            evo1Lbl.text = "No Evolutions"
+        } else {
+            evo1Img.image = UIImage(named: "\(pokemon.evo1ID)")
+            evo1Lbl.text = pokemon.evo1Name
+        }
+        if pokemon.evo2ID == "" {
+            evo2Img.hidden = true
+            evo2Lbl.hidden = true
+        } else {
+            evo2Img.image = UIImage(named: "\(pokemon.evo2ID)")
+            evo2Lbl.text = pokemon.evo2Name
+        }
+    }
 
 
 }
