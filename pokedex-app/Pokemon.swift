@@ -27,6 +27,10 @@ class Pokemon {
     private var _spa: Int!
     private var _spd: Int!
     private var _whereToFind: String!
+    private var _evo1Name: String!
+    private var _evo1ID: String!
+    private var _evo2Name: String!
+    private var _evo2ID: String!
     
     private var _pokeURL: String!
     
@@ -38,6 +42,70 @@ class Pokemon {
     
     var pokedexId: Int {
         return _pokedexId
+    }
+    
+    var height: Int {
+        return _height
+    }
+    
+    var weight: Int {
+        return _weight
+    }
+    
+    var type: String {
+        return _type
+    }
+    
+    var about: String {
+        return _about
+    }
+    
+    var hp: Int {
+        return _hp
+    }
+    
+    var atk: Int {
+        return _atk
+    }
+    
+    var def: Int {
+        return _def
+    }
+    
+    var spe: Int {
+        return _spe
+    }
+    
+    var spa: Int {
+        return _spa
+    }
+    
+    var spd: Int {
+        return _spd
+    }
+    
+    var whereToFind: String {
+        return _whereToFind
+    }
+
+    var evo1Name: String {
+        return _evo1Name
+    }
+    
+    var evo1ID: String {
+        return _evo1ID
+    }
+    
+    var pokeURL: String {
+        return _pokeURL
+    }
+    
+    var evo2Name: String {
+        return _evo2Name
+    }
+    
+    var evo2ID: String {
+        return _evo2ID
     }
     
     
@@ -58,14 +126,14 @@ class Pokemon {
             let result = response.result
 
             if let dict = result.value as? Dictionary<String, AnyObject> {
-                //height and weight
+                //Height and Weight
                 if let height = dict["height"] as? Int {
                     self._height = height
                 }
                 if let weight = dict["weight"] as? Int {
                     self._weight = weight
                 }
-                //stats
+                //Stats
                 if let attack = dict["attack"] as? Int {
                     self._atk = attack
                 }
@@ -84,7 +152,7 @@ class Pokemon {
                 if let speed = dict["speed"] as? Int {
                     self._spe = speed
                 }
-                //about
+                //About
                 if let about = dict["descriptions"] as? [Dictionary<String, AnyObject>] where about.count > 0 {
                     if let url = about[0]["resource_uri"] as? String {
                         let nsurl = NSURL(string: "\(URL_BASE)\(url)")!
@@ -100,7 +168,7 @@ class Pokemon {
                 } else {
                     self._about = "Unknown"
                 }
-                //types
+                //Types
                 if let types = dict["types"] as? [Dictionary<String, AnyObject>] where types.count > 0 {
                     if let type = types[0]["name"] as? String {
                         self._type = type.capitalizedString
@@ -115,7 +183,7 @@ class Pokemon {
                 } else {
                     self._type = "Unknown"
                 }
-                //evolutions
+                //Evolutions
                 if let evolutions = dict["evolutions"] as? [Dictionary<String, AnyObject>] where evolutions.count > 0 {
                 
                 }
