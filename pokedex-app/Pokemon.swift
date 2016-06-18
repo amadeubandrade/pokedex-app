@@ -15,6 +15,18 @@ class Pokemon {
     private var _name: String!
     private var _pokedexId: Int!
     
+    private var _height: String!
+    private var _weight: String!
+    private var _type: String!
+    private var _about: String!
+    private var _hp: String!
+    private var _atk: String!
+    private var _def: String!
+    private var _spe: String!
+    private var _spa: String!
+    private var _spd: String!
+    private var _whereToFind: String!
+    
     
     // MARK: - Computed Properties
 
