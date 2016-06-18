@@ -61,6 +61,10 @@ class PokemonDetailsVC: UIViewController {
             sender.alpha = 1.0
         }
     }
+    
+    @IBAction func onBackBtnPressed(sender: UIButton) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 
 
 
