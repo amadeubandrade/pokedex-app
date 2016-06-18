@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 class Pokemon {
 
@@ -14,19 +15,20 @@ class Pokemon {
     
     private var _name: String!
     private var _pokedexId: Int!
-    
+
     private var _height: String!
     private var _weight: String!
     private var _type: String!
     private var _about: String!
-    private var _hp: String!
-    private var _atk: String!
-    private var _def: String!
-    private var _spe: String!
-    private var _spa: String!
-    private var _spd: String!
+    private var _hp: Int!
+    private var _atk: Int!
+    private var _def: Int!
+    private var _spe: Int!
+    private var _spa: Int!
+    private var _spd: Int!
     private var _whereToFind: String!
     
+    private var _pokeURL: String!
     
     // MARK: - Computed Properties
 
@@ -44,6 +46,19 @@ class Pokemon {
     init(name: String, pokedexId: Int) {
         _name = name
         _pokedexId = pokedexId
+        _pokeURL = "\(URL_BASE)\(URL_POKEMON)\(_pokedexId)/"
+    }
+    
+    // MARK: - Functions
+    
+    func downloadPokemonDetails(completed: DownloadComplete) {
+        let url = NSURL(string: _pokeURL)!
+        
+        Alamofire.request(.GET, url).responseJSON { response in
+            let result = response.result
+            print(result.value.debugDescription)
+        }
+        
     }
 
 }
