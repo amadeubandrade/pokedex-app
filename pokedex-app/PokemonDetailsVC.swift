@@ -10,7 +10,7 @@ import UIKit
 
 class PokemonDetailsVC: UIViewController {
 
-    // MARK : - IBOutlets
+    // MARK: - IBOutlets
     
     @IBOutlet weak var topLbl: UILabel!
     @IBOutlet weak var pokeImg: UIImageView!
@@ -38,26 +38,25 @@ class PokemonDetailsVC: UIViewController {
     @IBOutlet weak var evo2Lbl: UILabel!
     
     
-    // MARK : - Properties
+    // MARK: - Properties
     
     var pokemon: Pokemon!
     var audioPlayer: ApplicationMusic!
     
     
-    // MARK : - View Lyfecycle
+    // MARK: -  View Lyfecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         topLbl.text = pokemon.name
         pokeImg.image = UIImage(named: "\(pokemon.pokedexId)")
         pokemon.downloadPokemonDetails {
-            print("HEYYYYYYY")
             self.updateUI()
         }
     }
     
     
-    // MARK : - IBActions
+    // MARK: -  IBActions
     
     @IBAction func onMusicBtnPressed(sender: UIButton) {
         if audioPlayer.isPlaying() {
@@ -72,11 +71,11 @@ class PokemonDetailsVC: UIViewController {
     @IBAction func onBackBtnPressed(sender: UIButton) {
         dismissViewControllerAnimated(true, completion: nil)
         
-    // TODO : - Correct sound when go back!
+    // TODO: - Correct sound when go back!
     }
 
     
-    // MARK : - Functions
+    // MARK: - Functions
     
     func updateUI() {
         pokeID.text = String(pokemon.pokedexId)

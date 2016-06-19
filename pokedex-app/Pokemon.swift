@@ -165,18 +165,19 @@ class Pokemon {
     // MARK: - Functions
     
     func downloadPokemonDetails(completed: DownloadComplete) {
-        let url = NSURL(string: _pokeURL)!
+        let group = dispatch_group_create()
         
-        Alamofire.request(.GET, url).responseJSON { response in
+        let url = NSURL(string: _pokeURL)!
+        dispatch_group_enter(group)
+        Alamofire.request(.GET, url).responseJSON(completionHandler: { response in
             let result = response.result
-
             if let dict = result.value as? Dictionary<String, AnyObject> {
                 //Height and Weight
-                if let height = dict["height"] as? Int {
-                    self._height = String(height)
+                if let height = dict["height"] as? String {
+                    self._height = height
                 }
-                if let weight = dict["weight"] as? Int {
-                    self._weight = String(weight)
+                if let weight = dict["weight"] as? String {
+                    self._weight = weight
                 }
                 //Stats
                 if let attack = dict["attack"] as? Int {
@@ -189,7 +190,7 @@ class Pokemon {
                     self._hp = hp
                 }
                 if let spec_attack = dict["sp_atk"] as? Int {
-                    self._atk = spec_attack
+                    self._spa = spec_attack
                 }
                 if let spec_defense = dict["sp_def"] as? Int {
                     self._spd = spec_defense
@@ -201,6 +202,7 @@ class Pokemon {
                 if let about = dict["descriptions"] as? [Dictionary<String, AnyObject>] where about.count > 0 {
                     if let url = about[0]["resource_uri"] as? String {
                         let nsurl = NSURL(string: "\(URL_BASE)\(url)")!
+                        dispatch_group_enter(group)
                         Alamofire.request(.GET, nsurl).responseJSON(completionHandler: { response in
                             let aboutResp = response.result
                             if let aboutDict = aboutResp.value as? Dictionary<String, AnyObject> {
@@ -208,6 +210,7 @@ class Pokemon {
                                     self._about = pokeDesc
                                 }
                             }
+                            dispatch_group_leave(group)
                         })
                     }
                 }
@@ -240,6 +243,7 @@ class Pokemon {
                             
                                 //Second evolution
                                 let evoUrl = NSURL(string: "\(URL_BASE)\(URL_POKEMON)\(self._evo1ID)/")!
+                                dispatch_group_enter(group)
                                 Alamofire.request(.GET, evoUrl).responseJSON(completionHandler: { evosResponse in
                                     let evosResult = evosResponse.result
                                     if let evolutionDict = evosResult.value as? Dictionary<String, AnyObject> {
@@ -256,17 +260,15 @@ class Pokemon {
                                             }
                                         }
                                     }
-                                    completed()
+                                    dispatch_group_leave(group)
                                 })
                             }
-                        } else {
-                            completed()
                         }
                     }
                 }
                 //where to find
                 
-                // TODO : - THIS ! !!   !! 
+                // TODO : - Correct sound when go back!
 
                 
 //                let encoutersUrl = NSURL(string: "\(self._pokeURL)encounters")!
@@ -286,8 +288,11 @@ class Pokemon {
                 
 
             }
+            dispatch_group_leave(group)
+        })
+        dispatch_group_notify(group, dispatch_get_main_queue()) {
+            completed()
         }
-        
     }
 
 }
