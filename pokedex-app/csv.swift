@@ -1,6 +1,6 @@
 //
 //  CSV
-//  Modified by Mark Price on 08/14/15
+//  Mark Price thanks for creating this! :)
 //
 
 import Foundation
