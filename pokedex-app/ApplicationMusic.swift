@@ -36,8 +36,9 @@ class ApplicationMusic {
         if audioPlayer.playing {
             stopAudio()
         }
-    // TODO: - Play sound in main thread!!
-        audioPlayer.play()
+        dispatch_async(dispatch_get_main_queue(), {
+            self.audioPlayer.play()
+        })
     }
     
     func stopAudio() {
