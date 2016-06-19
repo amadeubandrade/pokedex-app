@@ -94,13 +94,13 @@ class PokedexVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     // MARK: - SearchBar
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchBar.text == nil || searchBar.text == "" {
+        if searchText == "" {//searchBar.text == nil || searchBar.text == "" {
             inSearchMode = false
             view.endEditing(true)
             collection.reloadData()
         } else {
             inSearchMode = true
-            let text = searchBar.text!.lowercaseString
+            let text = searchText.lowercaseString
             filteredPokemons = pokemons.filter({$0.name.rangeOfString(text) != nil})
             collection.reloadData()
         }

@@ -157,7 +157,7 @@ class Pokemon {
     // MARK: - Initializer
     
     init(name: String, pokedexId: Int) {
-        _name = name.capitalizedString
+        _name = name
         _pokedexId = pokedexId
         _pokeURL = "\(URL_BASE)\(URL_POKEMON_V1)\(_pokedexId)/"
     }

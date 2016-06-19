@@ -668,14 +668,14 @@
                                                     <constraint firstAttribute="width" constant="175" id="eRq-Nb-Rm7"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading information..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxe-4E-cYp" userLabel="loadingInfoLbl">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading information..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxe-4E-cYp" userLabel="loadingInfoLbl">
                                                 <rect key="frame" x="179" y="333" width="242" height="37"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="37" id="EGW-8p-1XV"/>
                                                     <constraint firstAttribute="width" constant="242" id="FI8-0L-kkv"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="PokemonPuzzleChallengeGB" family="Pokemon Puzzle Challenge GB" pointSize="17"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>

@@ -54,8 +54,6 @@ class PokemonDetailsVC: UIViewController {
         super.viewDidLoad()
         loadingPokemonImg.image = UIImage(named: "\(self.pokemon.pokedexId)")
         pokemon.downloadPokemonDetails {
-            self.topLbl.text = self.pokemon.name
-            self.pokeImg.image = UIImage(named: "\(self.pokemon.pokedexId)")
             self.updateUI()
         }
     }
@@ -90,6 +88,8 @@ class PokemonDetailsVC: UIViewController {
         hideLoadingImages(true)
         
         //Update Pokemon details
+        topLbl.text = pokemon.name.capitalizedString
+        pokeImg.image = UIImage(named: "\(pokemon.pokedexId)")
         pokeID.text = String(pokemon.pokedexId)
         pokeHeight.text = pokemon.height
         pokeWeight.text = pokemon.weight
