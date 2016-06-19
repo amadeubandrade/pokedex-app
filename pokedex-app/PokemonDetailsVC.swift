@@ -42,6 +42,7 @@ class PokemonDetailsVC: UIViewController {
     
     var pokemon: Pokemon!
     var audioPlayer: ApplicationMusic!
+    let MAX_STAT: Float = 200
     
     
     // MARK: -  View Lyfecycle
@@ -104,6 +105,16 @@ class PokemonDetailsVC: UIViewController {
             evo2Img.image = UIImage(named: "\(pokemon.evo2ID)")
             evo2Lbl.text = pokemon.evo2Name
         }
+        updateStatBars()
+    }
+    
+    func updateStatBars() {
+        hpBar.setProgress(Float(pokemon.hp)/MAX_STAT, animated: true)
+        atkBar.setProgress(Float(pokemon.atk)/MAX_STAT, animated: true)
+        defBar.setProgress(Float(pokemon.def)/MAX_STAT, animated: true)
+        speBar.setProgress(Float(pokemon.spe)/MAX_STAT, animated: true)
+        spaBar.setProgress(Float(pokemon.spa)/MAX_STAT, animated: true)
+        spdBar.setProgress(Float(pokemon.spd)/MAX_STAT, animated: true)
     }
 
 

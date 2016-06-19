@@ -120,7 +120,7 @@ class Pokemon {
     
     var whereToFind: String {
         if _whereToFind == nil {
-            _whereToFind = "Unknown"
+            _whereToFind = "Impossible to find!"
         }
         return _whereToFind
     }
@@ -159,7 +159,7 @@ class Pokemon {
     init(name: String, pokedexId: Int) {
         _name = name.capitalizedString
         _pokedexId = pokedexId
-        _pokeURL = "\(URL_BASE)\(URL_POKEMON)\(_pokedexId)/"
+        _pokeURL = "\(URL_BASE)\(URL_POKEMON_V1)\(_pokedexId)/"
     }
     
     // MARK: - Functions
@@ -242,7 +242,7 @@ class Pokemon {
                                 self._evo1ID = id
                             
                                 //Second evolution
-                                let evoUrl = NSURL(string: "\(URL_BASE)\(URL_POKEMON)\(self._evo1ID)/")!
+                                let evoUrl = NSURL(string: "\(URL_BASE)\(URL_POKEMON_V1)\(self._evo1ID)/")!
                                 dispatch_group_enter(group)
                                 Alamofire.request(.GET, evoUrl).responseJSON(completionHandler: { evosResponse in
                                     let evosResult = evosResponse.result
@@ -267,26 +267,21 @@ class Pokemon {
                     }
                 }
                 //where to find
-                
-                // TODO : - Correct sound when go back!
-
-                
-//                let encoutersUrl = NSURL(string: "\(self._pokeURL)encounters")!
-//                Alamofire.request(.GET, encoutersUrl).responseJSON(completionHandler: { encountersResponse in
-//                    let encountersResult = encountersResponse.result
-//                    if let encountersDict = encountersResult.value as? [Dictionary<String, AnyObject>] where encountersDict.count > 0 {
-//                        print(encountersDict)
-//                        if let location = encountersDict[0]["location_area"]!["name"] as? String {
-//                            self._whereToFind = location
-//                        }
-//                    } else {
-//                        self._whereToFind = ""
-//                    }
-//                    print(encountersResult.value)
-//                    print(self._whereToFind)
-//                })
-                
-
+                let encoutersUrl = NSURL(string: "\(URL_BASE)\(URL_POKEMON_V2)encounters")!
+                print(encoutersUrl)
+                dispatch_group_enter(group)
+                Alamofire.request(.GET, encoutersUrl).responseJSON(completionHandler: { encountersResponse in
+                    let encountersResult = encountersResponse.result
+                    print(encountersResult)
+                    if let encountersDict = encountersResult.value as? [Dictionary<String, AnyObject>] where encountersDict.count > 0 {
+                        print(encountersDict)
+                        if let location = encountersDict[0]["location_area"]!["name"] as? String {
+                            print(location)
+                            self._whereToFind = location
+                        }
+                    }
+                    dispatch_group_leave(group)
+                })
             }
             dispatch_group_leave(group)
         })
