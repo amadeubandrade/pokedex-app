@@ -7,7 +7,7 @@ This app covers the following fields:
 * UISearchBar
 * UIScrollView
 * Web Requests (PokeAPI) & json parsing
-* Usage of Alamofire (downloaded by CocoaPods)
+* Usage of Alamofire (downloaded via CocoaPods)
 
 Screenshots:
 
