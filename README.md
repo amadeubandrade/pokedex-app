@@ -1,7 +1,6 @@
 # pokedex-app
-This is one of the apps made in Udemy's iOS course "iOS 9 and Swift 2: From Beginner to Paid Professional". 
-I wanted to do a little more than the requirements, so I added a UIScrollView when showing the Pokemon Details, added a loading screen, added more information about Pokemon and used Grand Central Dispatch to control the web request response.
-
+In this app the user can search for a Pokemon and see its information (basic information, statistics, about, where to find and its evolution).
+ 
 This app covers the following fields:
 * UICollectionView
 * UISearchBar
