@@ -42,7 +42,7 @@ class ApplicationMusic {
     
     func stopAudio() {
         audioPlayer.stop()
-        //audioPlayer.currentTime = 0.0
+        audioPlayer.currentTime = 0.0
     }
     
     func isPlaying() -> Bool {
