@@ -36,6 +36,9 @@ class PokemonDetailsVC: UIViewController {
     @IBOutlet weak var evo2Img: UIImageView!
     @IBOutlet weak var evo1Lbl: UILabel!
     @IBOutlet weak var evo2Lbl: UILabel!
+    @IBOutlet weak var loadingBgImg: UIImageView!
+    @IBOutlet weak var loadingPokemonImg: UIImageView!
+    @IBOutlet weak var loadingLbl: UILabel!
     
     
     // MARK: - Properties
@@ -49,11 +52,16 @@ class PokemonDetailsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        topLbl.text = pokemon.name
-        pokeImg.image = UIImage(named: "\(pokemon.pokedexId)")
+        loadingPokemonImg.image = UIImage(named: "\(self.pokemon.pokedexId)")
         pokemon.downloadPokemonDetails {
+            self.topLbl.text = self.pokemon.name
+            self.pokeImg.image = UIImage(named: "\(self.pokemon.pokedexId)")
             self.updateUI()
         }
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        hideLoadingImages(false)
     }
     
     
@@ -79,6 +87,10 @@ class PokemonDetailsVC: UIViewController {
     // MARK: - Functions
     
     func updateUI() {
+        //Hide loading images
+        hideLoadingImages(true)
+        
+        //Update Pokemon details
         pokeID.text = String(pokemon.pokedexId)
         pokeHeight.text = pokemon.height
         pokeWeight.text = pokemon.weight
@@ -115,6 +127,12 @@ class PokemonDetailsVC: UIViewController {
         speBar.setProgress(Float(pokemon.spe)/MAX_STAT, animated: true)
         spaBar.setProgress(Float(pokemon.spa)/MAX_STAT, animated: true)
         spdBar.setProgress(Float(pokemon.spd)/MAX_STAT, animated: true)
+    }
+    
+    func hideLoadingImages(boolean: Bool) {
+        loadingBgImg.hidden = boolean
+        loadingPokemonImg.hidden = boolean
+        loadingLbl.hidden = boolean
     }
 
 

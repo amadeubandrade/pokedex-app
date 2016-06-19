@@ -41,6 +41,7 @@
             <string>PokemonPuzzleChallengeGB</string>
             <string>PokemonPuzzleChallengeGB</string>
             <string>PokemonPuzzleChallengeGB</string>
+            <string>PokemonPuzzleChallengeGB</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -593,6 +594,26 @@
                                                 <fontDescription key="fontDescription" name="PokemonPuzzleChallengeGB" family="Pokemon Puzzle Challenge GB" pointSize="14"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z3D-0W-yZl" userLabel="evoBar">
+                                                <rect key="frame" x="0.0" y="766" width="600" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evolutions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmv-PA-nkm">
+                                                        <rect key="frame" x="8" y="8" width="91" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="21" id="gsI-Rw-EJM"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="PokemonPuzzleChallengeGB" family="Pokemon Puzzle Challenge GB" pointSize="14"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="S23-2Y-8H9"/>
+                                                    <constraint firstItem="jmv-PA-nkm" firstAttribute="top" secondItem="Z3D-0W-yZl" secondAttribute="top" constant="8" id="ov5-IE-HJi"/>
+                                                    <constraint firstItem="jmv-PA-nkm" firstAttribute="leading" secondItem="Z3D-0W-yZl" secondAttribute="leading" constant="8" id="yDB-Vi-vqO"/>
+                                                </constraints>
+                                            </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="IH1-t4-2TT" userLabel="evolSV">
                                                 <rect key="frame" x="175" y="816" width="250" height="140"/>
                                                 <subviews>
@@ -637,26 +658,26 @@
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z3D-0W-yZl" userLabel="evoBar">
-                                                <rect key="frame" x="0.0" y="766" width="600" height="30"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evolutions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmv-PA-nkm">
-                                                        <rect key="frame" x="8" y="8" width="91" height="21"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="21" id="gsI-Rw-EJM"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="PokemonPuzzleChallengeGB" family="Pokemon Puzzle Challenge GB" pointSize="14"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="eJ1-yS-EEX" userLabel="loadingImgBg">
+                                                <rect key="frame" x="0.0" y="55" width="600" height="945"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="df0-1E-jOQ" userLabel="loadingImgPokemon">
+                                                <rect key="frame" x="213" y="155" width="175" height="175"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="S23-2Y-8H9"/>
-                                                    <constraint firstItem="jmv-PA-nkm" firstAttribute="top" secondItem="Z3D-0W-yZl" secondAttribute="top" constant="8" id="ov5-IE-HJi"/>
-                                                    <constraint firstItem="jmv-PA-nkm" firstAttribute="leading" secondItem="Z3D-0W-yZl" secondAttribute="leading" constant="8" id="yDB-Vi-vqO"/>
+                                                    <constraint firstAttribute="height" constant="175" id="UIL-qO-t6T"/>
+                                                    <constraint firstAttribute="width" constant="175" id="eRq-Nb-Rm7"/>
                                                 </constraints>
-                                            </view>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading information..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxe-4E-cYp" userLabel="loadingInfoLbl">
+                                                <rect key="frame" x="179" y="333" width="242" height="37"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="37" id="EGW-8p-1XV"/>
+                                                    <constraint firstAttribute="width" constant="242" id="FI8-0L-kkv"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="PokemonPuzzleChallengeGB" family="Pokemon Puzzle Challenge GB" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -671,21 +692,28 @@
                                             <constraint firstAttribute="height" constant="1000" id="9Ur-rF-WrU"/>
                                             <constraint firstAttribute="trailing" secondItem="Z3D-0W-yZl" secondAttribute="trailing" id="9cU-Tu-8rO"/>
                                             <constraint firstAttribute="trailing" secondItem="mRW-4j-MVn" secondAttribute="trailing" id="AH4-Ls-vqc"/>
+                                            <constraint firstItem="eJ1-yS-EEX" firstAttribute="top" secondItem="Cgs-CW-anx" secondAttribute="bottom" id="BBw-P3-iJd"/>
+                                            <constraint firstItem="gxe-4E-cYp" firstAttribute="top" secondItem="df0-1E-jOQ" secondAttribute="bottom" constant="3" id="BhG-cd-BOb"/>
                                             <constraint firstItem="Cgs-CW-anx" firstAttribute="top" secondItem="TSe-7J-x2J" secondAttribute="top" id="Cdp-XY-GMv"/>
                                             <constraint firstItem="IH1-t4-2TT" firstAttribute="centerX" secondItem="TSe-7J-x2J" secondAttribute="centerX" id="Chs-cR-J5i"/>
                                             <constraint firstItem="6ya-DA-0gv" firstAttribute="leading" secondItem="TSe-7J-x2J" secondAttribute="leading" constant="20" id="Fpp-In-oYy"/>
                                             <constraint firstItem="Cgs-CW-anx" firstAttribute="leading" secondItem="TSe-7J-x2J" secondAttribute="leading" id="Fzm-J4-6zf"/>
+                                            <constraint firstItem="df0-1E-jOQ" firstAttribute="top" secondItem="Cgs-CW-anx" secondAttribute="bottom" constant="100" id="Gdv-wW-NLr"/>
                                             <constraint firstAttribute="trailing" secondItem="HcK-j1-P3k" secondAttribute="trailing" constant="20" id="GjJ-aG-KZj"/>
+                                            <constraint firstItem="gxe-4E-cYp" firstAttribute="centerX" secondItem="TSe-7J-x2J" secondAttribute="centerX" id="NOP-x7-jhM"/>
                                             <constraint firstItem="ELP-zR-0im" firstAttribute="leading" secondItem="TSe-7J-x2J" secondAttribute="leading" id="PNX-Ty-dp7"/>
                                             <constraint firstItem="n2B-3z-Gnm" firstAttribute="top" secondItem="FQZ-z5-8ld" secondAttribute="bottom" constant="10" id="Pit-i7-xz2"/>
                                             <constraint firstItem="Z3D-0W-yZl" firstAttribute="top" secondItem="n2B-3z-Gnm" secondAttribute="bottom" constant="20" id="QnA-Sr-uBw"/>
                                             <constraint firstAttribute="trailing" secondItem="Cgs-CW-anx" secondAttribute="trailing" id="RmK-ad-rJf"/>
+                                            <constraint firstItem="df0-1E-jOQ" firstAttribute="centerX" secondItem="TSe-7J-x2J" secondAttribute="centerX" id="RsN-DS-heb"/>
                                             <constraint firstItem="r21-fe-Gsr" firstAttribute="leading" secondItem="TSe-7J-x2J" secondAttribute="leading" id="Rtc-wP-Dwz"/>
                                             <constraint firstAttribute="trailing" secondItem="FQZ-z5-8ld" secondAttribute="trailing" id="Yr3-uL-1no"/>
                                             <constraint firstItem="Cgs-CW-anx" firstAttribute="top" secondItem="TSe-7J-x2J" secondAttribute="top" id="adH-0b-gvY"/>
                                             <constraint firstAttribute="trailing" secondItem="6ya-DA-0gv" secondAttribute="trailing" constant="20" id="agF-YW-4Ff"/>
                                             <constraint firstItem="r21-fe-Gsr" firstAttribute="top" secondItem="6ya-DA-0gv" secondAttribute="bottom" constant="20" id="dXx-Fw-OaD"/>
+                                            <constraint firstAttribute="trailing" secondItem="eJ1-yS-EEX" secondAttribute="trailing" id="eNf-di-4NZ"/>
                                             <constraint firstItem="FQZ-z5-8ld" firstAttribute="top" secondItem="X5h-hG-fsV" secondAttribute="bottom" constant="20" id="eTr-Bz-sW8"/>
+                                            <constraint firstItem="eJ1-yS-EEX" firstAttribute="leading" secondItem="TSe-7J-x2J" secondAttribute="leading" id="fOx-PG-Gl2"/>
                                             <constraint firstItem="6ya-DA-0gv" firstAttribute="top" secondItem="ELP-zR-0im" secondAttribute="bottom" constant="10" id="hXd-Ad-SIZ"/>
                                             <constraint firstAttribute="trailing" secondItem="X5h-hG-fsV" secondAttribute="trailing" constant="20" id="jkC-hD-i44"/>
                                             <constraint firstItem="ELP-zR-0im" firstAttribute="top" secondItem="HcK-j1-P3k" secondAttribute="bottom" constant="20" id="lS4-0i-VCj"/>
@@ -697,6 +725,7 @@
                                             <constraint firstItem="X5h-hG-fsV" firstAttribute="leading" secondItem="TSe-7J-x2J" secondAttribute="leading" constant="20" id="w09-0u-ieK"/>
                                             <constraint firstAttribute="trailing" secondItem="Cgs-CW-anx" secondAttribute="trailing" id="yGx-MX-Ata"/>
                                             <constraint firstItem="Cgs-CW-anx" firstAttribute="leading" secondItem="TSe-7J-x2J" secondAttribute="leading" id="yhG-ol-axd"/>
+                                            <constraint firstAttribute="bottom" secondItem="eJ1-yS-EEX" secondAttribute="bottom" id="z2r-O9-jQd"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -738,6 +767,9 @@
                         <outlet property="evo2Lbl" destination="MCe-gy-Xca" id="vpw-Nt-foW"/>
                         <outlet property="hpBar" destination="f0J-4L-6Bh" id="hxG-Ip-CHi"/>
                         <outlet property="hpLbl" destination="76f-k6-mJ5" id="AEj-7L-Fzj"/>
+                        <outlet property="loadingBgImg" destination="eJ1-yS-EEX" id="GZp-BP-1Uz"/>
+                        <outlet property="loadingLbl" destination="gxe-4E-cYp" id="8dp-Qt-G8H"/>
+                        <outlet property="loadingPokemonImg" destination="df0-1E-jOQ" id="FHy-Rx-2BS"/>
                         <outlet property="pokeHeight" destination="OoP-H5-ofp" id="WSB-PY-Oee"/>
                         <outlet property="pokeID" destination="BWW-4s-VPy" id="hd5-8I-I2R"/>
                         <outlet property="pokeImg" destination="0pF-vY-sGT" id="SM3-Hc-gvc"/>
