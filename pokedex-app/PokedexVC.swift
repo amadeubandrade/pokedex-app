@@ -37,6 +37,11 @@ class PokedexVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         parsePokemonCSV()
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        audioPlayer.playAudio()
+    }
+    
     
     // MARK: - UICollection View methods
     

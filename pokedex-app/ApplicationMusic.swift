@@ -23,7 +23,6 @@ class ApplicationMusic {
             audioPlayer = try AVAudioPlayer(contentsOfURL: url)
             audioPlayer.prepareToPlay()
             audioPlayer.numberOfLoops = -1
-            playAudio()
         } catch let err as NSError {
             print(err.debugDescription)
         }
@@ -43,7 +42,7 @@ class ApplicationMusic {
     
     func stopAudio() {
         audioPlayer.stop()
-        audioPlayer.currentTime = 0.0
+        //audioPlayer.currentTime = 0.0
     }
     
     func isPlaying() -> Bool {

@@ -61,6 +61,7 @@ class PokemonDetailsVC: UIViewController {
     }
     
     override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(true)
         hideLoadingImages(false)
     }
     
@@ -79,8 +80,6 @@ class PokemonDetailsVC: UIViewController {
     
     @IBAction func onBackBtnPressed(sender: UIButton) {
         dismissViewControllerAnimated(true, completion: nil)
-        
-    // TODO: - Correct sound when go back!
     }
 
     
