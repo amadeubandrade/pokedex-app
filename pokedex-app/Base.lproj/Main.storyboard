@@ -325,7 +325,7 @@
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="f0b-4r-rlY" userLabel="typeSV">
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="f0b-4r-rlY" userLabel="typeSV">
                                                                 <rect key="frame" x="0.0" y="124" width="203" height="36"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m41-Gg-uen">
@@ -334,7 +334,7 @@
                                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="stuff and stuff2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uLP-KD-N63">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="stuff and stuff2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uLP-KD-N63">
                                                                         <rect key="frame" x="53" y="0.0" width="150" height="36"/>
                                                                         <fontDescription key="fontDescription" name="PokemonPuzzleChallengeGB" family="Pokemon Puzzle Challenge GB" pointSize="13"/>
                                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -350,7 +350,7 @@
                                                 <rect key="frame" x="0.0" y="255" width="600" height="30"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZC3-DG-hHU">
-                                                        <rect key="frame" x="8" y="4" width="53" height="21"/>
+                                                        <rect key="frame" x="8" y="8" width="53" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="MyL-pc-TrK"/>
                                                         </constraints>
@@ -362,7 +362,7 @@
                                                 <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="Ko8-9B-afA"/>
-                                                    <constraint firstItem="ZC3-DG-hHU" firstAttribute="top" secondItem="ELP-zR-0im" secondAttribute="top" constant="4" id="M1T-0I-jQn"/>
+                                                    <constraint firstItem="ZC3-DG-hHU" firstAttribute="top" secondItem="ELP-zR-0im" secondAttribute="top" constant="8" id="M1T-0I-jQn"/>
                                                     <constraint firstItem="ZC3-DG-hHU" firstAttribute="leading" secondItem="ELP-zR-0im" secondAttribute="leading" constant="8" id="UMY-bH-vR2"/>
                                                 </constraints>
                                             </view>
@@ -379,7 +379,7 @@
                                                 <rect key="frame" x="0.0" y="405" width="600" height="30"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qe3-mS-TQZ">
-                                                        <rect key="frame" x="8" y="4" width="53" height="21"/>
+                                                        <rect key="frame" x="8" y="8" width="53" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="g1b-cH-8NL"/>
                                                         </constraints>
@@ -392,7 +392,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="Ifc-sp-sBT"/>
                                                     <constraint firstItem="Qe3-mS-TQZ" firstAttribute="leading" secondItem="r21-fe-Gsr" secondAttribute="leading" constant="8" id="mBR-1V-EDI"/>
-                                                    <constraint firstItem="Qe3-mS-TQZ" firstAttribute="top" secondItem="r21-fe-Gsr" secondAttribute="top" constant="4" id="n2o-no-Kbp"/>
+                                                    <constraint firstItem="Qe3-mS-TQZ" firstAttribute="top" secondItem="r21-fe-Gsr" secondAttribute="top" constant="8" id="n2o-no-Kbp"/>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="X5h-hG-fsV" userLabel="statsSV">
@@ -569,7 +569,7 @@
                                                 <rect key="frame" x="0.0" y="631" width="600" height="30"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where To Find" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrM-hT-oGP">
-                                                        <rect key="frame" x="8" y="4" width="130" height="21"/>
+                                                        <rect key="frame" x="8" y="8" width="130" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="OnN-xH-gKu"/>
                                                         </constraints>
@@ -582,7 +582,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="Jzi-1a-zQ3"/>
                                                     <constraint firstItem="mrM-hT-oGP" firstAttribute="leading" secondItem="FQZ-z5-8ld" secondAttribute="leading" constant="8" id="cXn-51-vGk"/>
-                                                    <constraint firstItem="mrM-hT-oGP" firstAttribute="top" secondItem="FQZ-z5-8ld" secondAttribute="top" constant="4" id="rVr-Li-nSH"/>
+                                                    <constraint firstItem="mrM-hT-oGP" firstAttribute="top" secondItem="FQZ-z5-8ld" secondAttribute="top" constant="8" id="rVr-Li-nSH"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Route 13, 14, 15, Berry Forest, Bond Bridge, Five Isle Meadow" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n2B-3z-Gnm">
@@ -641,7 +641,7 @@
                                                 <rect key="frame" x="0.0" y="766" width="600" height="30"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evolutions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmv-PA-nkm">
-                                                        <rect key="frame" x="8" y="4" width="91" height="21"/>
+                                                        <rect key="frame" x="8" y="8" width="91" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="gsI-Rw-EJM"/>
                                                         </constraints>
@@ -653,7 +653,7 @@
                                                 <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="S23-2Y-8H9"/>
-                                                    <constraint firstItem="jmv-PA-nkm" firstAttribute="top" secondItem="Z3D-0W-yZl" secondAttribute="top" constant="4" id="ov5-IE-HJi"/>
+                                                    <constraint firstItem="jmv-PA-nkm" firstAttribute="top" secondItem="Z3D-0W-yZl" secondAttribute="top" constant="8" id="ov5-IE-HJi"/>
                                                     <constraint firstItem="jmv-PA-nkm" firstAttribute="leading" secondItem="Z3D-0W-yZl" secondAttribute="leading" constant="8" id="yDB-Vi-vqO"/>
                                                 </constraints>
                                             </view>

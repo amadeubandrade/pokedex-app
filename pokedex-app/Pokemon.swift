@@ -267,17 +267,14 @@ class Pokemon {
                     }
                 }
                 //where to find
-                let encoutersUrl = NSURL(string: "\(URL_BASE)\(URL_POKEMON_V2)encounters")!
-                print(encoutersUrl)
+                let encoutersUrl = NSURL(string: "\(URL_BASE)\(URL_POKEMON_V2)\(self._pokedexId)/encounters")!
                 dispatch_group_enter(group)
                 Alamofire.request(.GET, encoutersUrl).responseJSON(completionHandler: { encountersResponse in
                     let encountersResult = encountersResponse.result
-                    print(encountersResult)
                     if let encountersDict = encountersResult.value as? [Dictionary<String, AnyObject>] where encountersDict.count > 0 {
-                        print(encountersDict)
                         if let location = encountersDict[0]["location_area"]!["name"] as? String {
-                            print(location)
-                            self._whereToFind = location
+                            let correctLocation = location.stringByReplacingOccurrencesOfString("-", withString: " ").capitalizedString
+                            self._whereToFind = correctLocation
                         }
                     }
                     dispatch_group_leave(group)
