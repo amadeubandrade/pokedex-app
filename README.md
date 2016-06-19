@@ -4,6 +4,7 @@ I want to do a little more than the requirements, so I added a UIScrollView when
 
 This app covers the following fields:
 * UICollectionView
+* UISearchBar
 * UIScrollView
 * Web Requests (PokeAPI) & json parsing
 * Usage of Alamofire (downloaded by CocoaPods)
